@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Header from '@/components/sections/header'
 import Footer from '@/components/sections/footer'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: 'v0 App',
@@ -15,7 +16,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html>
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body>
         <Header />
         <main>
