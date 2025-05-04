@@ -5,9 +5,8 @@ import Footer from '@/components/sections/footer'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Verbaland',
+  description: 'La conversación inteligente para acelerar tu institución.',
 }
 
 export default function RootLayout({
