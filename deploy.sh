@@ -16,24 +16,20 @@ trap 'handle_error' ERR
 
 echo "🚀 Deploying Verbaland site..."
 
-STEP="Navigating to application directory"
-echo "[1/5] $STEP..."
-cd /var/www/web
-
 STEP="Pulling latest changes"
-echo "[2/5] $STEP..."
+echo "$STEP..."
 git pull
 
 STEP="Installing dependencies"
-echo "[3/5] $STEP..."
+echo "$STEP..."
 pnpm install
 
 STEP="Building application"
-echo "[4/5] $STEP..."
+echo "$STEP..."
 pnpm run build
 
 STEP="Restarting pm2"
-echo "[5/5] $STEP..."
+echo "$STEP..."
 pm2 restart web
 
 # If we get here, all steps completed successfully
