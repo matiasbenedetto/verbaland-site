@@ -18,7 +18,7 @@ echo "🚀 Deploying Verbaland site..."
 
 STEP="Navigating to application directory"
 echo "[1/5] $STEP..."
-cd /var/www/verbaland-site
+cd /var/www/web
 
 STEP="Pulling latest changes"
 echo "[2/5] $STEP..."
