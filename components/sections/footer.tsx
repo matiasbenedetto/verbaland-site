@@ -1,123 +1,125 @@
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, Mail } from "lucide-react";
+import { Twitter, Linkedin, Mail, MessageSquare, Globe, Zap } from "lucide-react";
 
 function Footer() {
     return (
-        <footer className="bg-black/80 backdrop-blur-md border-t border-white/10 text-white mt-20">
-            {/* Big Verbaland text spanning the width */}
-            <div className="relative overflow-hidden border-b border-white/10 py-12">
-                <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-                    <span className="text-[20vw] font-brand font-bold text-white/5 whitespace-nowrap select-none">
-                        Verbaland
-                    </span>
-                </div>
-            </div>
+        <footer className="bg-black text-white">
+            {/* Main Footer Content */}
             <div className="container mx-auto px-4 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                     {/* Brand Column */}
-                    <div className="space-y-4">
+                    <div className="space-y-6">
                         <Link href="/" className="text-2xl font-brand text-white">Verbaland</Link>
-                        <p className="text-white/70 mt-2">
-                            Soluciones de IA para acelerar la atención institucional y mejorar la experiencia educativa.
+                        <p className="text-gray-400 leading-relaxed">
+                            Transform any website into an intelligent chatbot. The smart conversation to accelerate your project.
                         </p>
-                        <div className="flex space-x-4 pt-2">
-                            <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                                <Facebook size={20} />
-                            </Link>
-                            <Link href="#" className="text-white/70 hover:text-white transition-colors">
+                        <div className="flex space-x-4">
+                            <Link href="#" className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/10">
                                 <Twitter size={20} />
                             </Link>
-                            <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                                <Instagram size={20} />
-                            </Link>
-                            <Link href="#" className="text-white/70 hover:text-white transition-colors">
+                            <Link href="#" className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/10">
                                 <Linkedin size={20} />
                             </Link>
                         </div>
                     </div>
 
-                    {/* Solutions Column */}
-                    <div className="space-y-4">
-                        <h3 className="text-lg font-semibold">Soluciones</h3>
-                        <ul className="space-y-2">
+                    {/* Product Column */}
+                    <div className="space-y-6">
+                        <h3 className="text-lg font-semibold text-white">Product</h3>
+                        <ul className="space-y-3">
                             <li>
-                                <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                                    Asistente Virtual
+                                <Link href="#" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                                    <MessageSquare size={16} />
+                                    <span>Chatbot Builder</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                                    Atención Estudiantil
+                                <Link href="#" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                                    <Globe size={16} />
+                                    <span>Website Integration</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                                    Admisiones
+                                <Link href="#" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                                    <Zap size={16} />
+                                    <span>Analytics</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                                    Analítica Educativa
+                                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    API Documentation
                                 </Link>
                             </li>
                         </ul>
                     </div>
 
                     {/* Company Column */}
-                    <div className="space-y-4">
-                        <h3 className="text-lg font-semibold">Empresa</h3>
-                        <ul className="space-y-2">
+                    <div className="space-y-6">
+                        <h3 className="text-lg font-semibold text-white">Company</h3>
+                        <ul className="space-y-3">
                             <li>
-                                <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                                    Sobre Nosotros
+                                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    About Us
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                                    Casos de Éxito
+                                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    Case Studies
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-white/70 hover:text-white transition-colors">
+                                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                                     Blog
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                                    Contacto
+                                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    Careers
                                 </Link>
                             </li>
                         </ul>
                     </div>
 
                     {/* Contact Column */}
-                    <div className="space-y-4">
-                        <h3 className="text-lg font-semibold">Contacto</h3>
-                        <p className="text-white/70">
-                            ¿Tienes preguntas? Estamos aquí para ayudarte.
+                    <div className="space-y-6">
+                        <h3 className="text-lg font-semibold text-white">Get Started</h3>
+                        <p className="text-gray-400">
+                            Ready to transform your website? Start building your chatbot today.
                         </p>
-                        <Link 
-                            href="mailto:info@verbaland.com" 
-                            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white text-sm font-medium transition-colors"
-                        >
-                            <Mail size={16} />
-                            <span>info@verbaland.com</span>
-                        </Link>
+                        <div className="space-y-3">
+                            <button className="w-full bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors">
+                                Start Free Trial
+                            </button>
+                            <Link 
+                                href="mailto:hello@verbaland.com" 
+                                className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                            >
+                                <Mail size={16} />
+                                <span>hello@verbaland.com</span>
+                            </Link>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                {/* Bottom Bar */}
-                <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                    <p className="text-white/50 text-sm">
-                        © {new Date().getFullYear()} Verbaland. Todos los derechos reservados.
-                    </p>
-                    <div className="flex space-x-6 mt-4 md:mt-0">
-                        <Link href="#" className="text-white/50 hover:text-white text-sm transition-colors">
-                            Términos de Servicio
-                        </Link>
-                        <Link href="#" className="text-white/50 hover:text-white text-sm transition-colors">
-                            Política de Privacidad
-                        </Link>
+            {/* Bottom Bar */}
+            <div className="border-t border-gray-800">
+                <div className="container mx-auto px-4 py-8">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p className="text-gray-400 text-sm">
+                            © {new Date().getFullYear()} Verbaland. All rights reserved.
+                        </p>
+                        <div className="flex space-x-8">
+                            <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+                                Privacy Policy
+                            </Link>
+                            <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+                                Terms of Service
+                            </Link>
+                            <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+                                Cookie Policy
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

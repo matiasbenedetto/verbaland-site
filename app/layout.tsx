@@ -6,7 +6,7 @@ import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: 'Verbaland',
-  description: 'La conversación inteligente para acelerar tu institución.',
+  description: 'The smart conversation to accelerate your project.',
 }
 
 export default function RootLayout({
