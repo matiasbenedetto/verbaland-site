@@ -7,7 +7,7 @@ import AnimatedHeroBackground from "@/components/AnimatedHeroBackground"
 export default function HeroSection() {
 
   return (
-    <div className="relative overflow-hidden min-h-screen pt-20">
+    <div className="relative overflow-hidden min-h-screen pt-12">
 
       <AnimatedHeroBackground />
 

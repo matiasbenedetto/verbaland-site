@@ -4,14 +4,14 @@ export default function Home() {
     return (
         <>
             {/* Hero Section */}
-            <section className="min-h-screen bg-white flex items-center justify-center px-4 pt-24">
+            <section className="min-h-screen bg-white flex items-center justify-center px-4 pt-12">
                 <div className="container mx-auto max-w-7xl">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left Column - Content */}
                         <div className="space-y-8">
                             {/* Main Heading */}
                             <div className="space-y-4">
-                                <h1 className="text-5xl md:text-6xl lg:text-7xl font-brand text-black leading-tight">
+                                <h1 className="text-5xl md:text-6xl lg:text-7xl font-inconsolata font-bold text-black leading-tight">
                                     The intelligent
                                     <br />
                                     <span className="text-gray-600">conversation</span>
@@ -44,93 +44,12 @@ export default function Home() {
                         {/* Right Column - Live Chat Demo */}
                         <div className="relative lg:pl-8">
                             <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl shadow-black/10 border border-white/20 overflow-hidden ring-1 ring-white/30 max-w-md mx-auto">
-                                {/* Chat Header */}
-                                <div className="bg-gradient-to-r from-black to-gray-800 p-4">
-                                    <div className="flex items-center gap-3">
-                                        <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                                        <div>
-                                            <h3 className="text-white font-medium text-sm">Verbaland Assistant</h3>
-                                            <p className="text-gray-300 text-xs">Always online • Responds instantly</p>
-                                        </div>
-                                        <div className="ml-auto flex items-center gap-1 bg-white/10 px-2 py-1 rounded-full">
-                                            <Users size={12} className="text-white/70" />
-                                            <span className="text-white/70 text-xs">1.2k online</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Chat Messages */}
-                                <div className="p-4 space-y-4 h-80 overflow-y-auto bg-gray-50/50">
-                                    <div className="flex gap-3">
-                                        <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center flex-shrink-0">
-                                            <MessageSquare className="text-white" size={16} />
-                                        </div>
-                                        <div className="bg-white p-3 rounded-2xl rounded-tl-md shadow-sm border border-gray-100 max-w-xs">
-                                            <p className="text-sm text-gray-700">👋 Hi! I'm your website's AI assistant. I can help visitors with questions about your products, services, and content.</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex gap-3 justify-end">
-                                        <div className="bg-black text-white p-3 rounded-2xl rounded-tr-md max-w-xs">
-                                            <p className="text-sm">How does the integration work?</p>
-                                        </div>
-                                        <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <Users className="text-gray-600" size={16} />
-                                        </div>
-                                    </div>
-
-                                    <div className="flex gap-3">
-                                        <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center flex-shrink-0">
-                                            <MessageSquare className="text-white" size={16} />
-                                        </div>
-                                        <div className="bg-white p-3 rounded-2xl rounded-tl-md shadow-sm border border-gray-100 max-w-xs">
-                                            <p className="text-sm text-gray-700">Great question! Integration is super simple:</p>
-                                            <div className="mt-2 space-y-1 text-xs text-gray-600">
-                                                <p>1. 📝 Paste your website URL</p>
-                                                <p>2. 🔗 Copy one line of code</p>
-                                                <p>3. 🚀 Your chatbot is live!</p>
-                                            </div>
-                                            <p className="text-xs text-gray-500 mt-2">Takes less than 5 minutes ⚡</p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex gap-3 justify-end">
-                                        <div className="bg-black text-white p-3 rounded-2xl rounded-tr-md max-w-xs">
-                                            <p className="text-sm">That sounds amazing! What about pricing?</p>
-                                        </div>
-                                        <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <Users className="text-gray-600" size={16} />
-                                        </div>
-                                    </div>
-
-                                    <div className="flex gap-3">
-                                        <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center flex-shrink-0">
-                                            <MessageSquare className="text-white" size={16} />
-                                        </div>
-                                        <div className="bg-white p-3 rounded-2xl rounded-tl-md shadow-sm border border-gray-100 max-w-xs">
-                                            <div className="animate-pulse flex space-x-1">
-                                                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                                                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                                                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Chat Input */}
-                                <div className="p-4 border-t border-gray-200 bg-white">
-                                    <div className="flex gap-2">
-                                        <input 
-                                            type="text"
-                                            placeholder="Ask me anything..."
-                                            className="flex-1 px-4 py-3 border border-gray-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-black/10 bg-gray-50"
-                                            disabled
-                                        />
-                                        <button className="bg-black text-white p-3 rounded-full hover:bg-gray-800 transition-colors">
-                                            <ArrowRight size={16} />
-                                        </button>
-                                    </div>
-                                </div>
+                                <iframe 
+                                    src="https://verba.land/app/chat/?projectId=c6ba2f7e-e610-4b93-a3a1-762e42ce6e87&welcomeMessage=Hi! welcome to Verbaland. How can I help you?"
+                                    className="w-full h-96 border-0"
+                                    title="Verbaland Live Chat Demo"
+                                    allow="microphone; camera"
+                                />
                             </div>
 
                             {/* Floating Badge */}
@@ -150,7 +69,7 @@ export default function Home() {
                             <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mx-auto">
                                 <Globe className="text-white" size={28} />
                             </div>
-                            <h3 className="text-xl font-semibold text-black">Website Integration</h3>
+                            <h3 className="text-xl font-inconsolata font-semibold text-black">Website Integration</h3>
                             <p className="text-gray-600">Seamlessly scrape and understand any website content in seconds</p>
                         </div>
                         
@@ -158,7 +77,7 @@ export default function Home() {
                             <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mx-auto">
                                 <MessageSquare className="text-white" size={28} />
                             </div>
-                            <h3 className="text-xl font-semibold text-black">Smart Conversations</h3>
+                            <h3 className="text-xl font-inconsolata font-semibold text-black">Smart Conversations</h3>
                             <p className="text-gray-600">AI-powered chatbot that understands context and provides accurate answers</p>
                         </div>
                         
@@ -166,7 +85,7 @@ export default function Home() {
                             <div className="w-16 h-16 bg-black rounded-2xl flex items-center justify-center mx-auto">
                                 <Zap className="text-white" size={28} />
                             </div>
-                            <h3 className="text-xl font-semibold text-black">Lightning Fast</h3>
+                            <h3 className="text-xl font-inconsolata font-semibold text-black">Lightning Fast</h3>
                             <p className="text-gray-600">Deploy your chatbot in minutes, not hours or days</p>
                         </div>
                     </div>
@@ -179,7 +98,7 @@ export default function Home() {
                     <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="space-y-6">
-                                <h2 className="text-4xl md:text-5xl font-brand text-black">
+                                <h2 className="text-4xl md:text-5xl font-inconsolata font-semibold text-black">
                                     Never miss a visitor question again
                                 </h2>
                                 <p className="text-xl text-gray-600 leading-relaxed">
@@ -244,7 +163,7 @@ export default function Home() {
             <section className="py-24 px-4 bg-gray-50">
                 <div className="container mx-auto max-w-6xl">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-brand text-black mb-6">
+                        <h2 className="text-4xl md:text-5xl font-inconsolata font-semibold text-black mb-6">
                             Setup in minutes,
                             <br />
                             <span className="text-gray-600">support 24/7</span>
@@ -262,11 +181,8 @@ export default function Home() {
                                 <div className="w-20 h-20 bg-black rounded-2xl flex items-center justify-center mx-auto">
                                     <Globe className="text-white" size={32} />
                                 </div>
-                                <div className="absolute -top-2 -right-2 w-8 h-8 bg-white border-2 border-black rounded-full flex items-center justify-center">
-                                    <span className="text-black font-bold text-sm">1</span>
-                                </div>
                             </div>
-                            <h3 className="text-2xl font-semibold text-black">Connect Your Website</h3>
+                            <h3 className="text-2xl font-inconsolata font-semibold text-black">Connect Your Website</h3>
                             <p className="text-gray-600 leading-relaxed">
                                 Simply paste your website URL. Verbaland automatically scrapes and understands your content, 
                                 documentation, and knowledge base.
@@ -278,11 +194,8 @@ export default function Home() {
                                 <div className="w-20 h-20 bg-black rounded-2xl flex items-center justify-center mx-auto">
                                     <Code className="text-white" size={32} />
                                 </div>
-                                <div className="absolute -top-2 -right-2 w-8 h-8 bg-white border-2 border-black rounded-full flex items-center justify-center">
-                                    <span className="text-black font-bold text-sm">2</span>
-                                </div>
                             </div>
-                            <h3 className="text-2xl font-semibold text-black">Embed One Line of Code</h3>
+                            <h3 className="text-2xl font-inconsolata font-semibold text-black">Embed One Line of Code</h3>
                             <p className="text-gray-600 leading-relaxed">
                                 Copy and paste a single line of code into your website. No complex integrations, 
                                 no technical expertise required.
@@ -294,11 +207,8 @@ export default function Home() {
                                 <div className="w-20 h-20 bg-black rounded-2xl flex items-center justify-center mx-auto">
                                     <Clock className="text-white" size={32} />
                                 </div>
-                                <div className="absolute -top-2 -right-2 w-8 h-8 bg-white border-2 border-black rounded-full flex items-center justify-center">
-                                    <span className="text-black font-bold text-sm">3</span>
-                                </div>
                             </div>
-                            <h3 className="text-2xl font-semibold text-black">Go Live Instantly</h3>
+                            <h3 className="text-2xl font-inconsolata font-semibold text-black">Go Live Instantly</h3>
                             <p className="text-gray-600 leading-relaxed">
                                 Your intelligent chat assistant is now live, providing instant, accurate answers 
                                 to your visitors 24 hours a day, 7 days a week.
@@ -311,7 +221,7 @@ export default function Home() {
             {/* Secondary Section */}
             <section className="bg-gray-50 py-24 px-4">
                 <div className="container mx-auto max-w-4xl text-center">
-                    <h2 className="text-4xl md:text-5xl font-brand text-black mb-8">
+                    <h2 className="text-4xl md:text-5xl font-inconsolata font-semibold text-black mb-8">
                         Ready to transform your website?
                     </h2>
                     <p className="text-xl text-gray-600 mb-12">
